@@ -1,31 +1,41 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import './styles/header.scss'
 import logo from '../img/Logo.png'
-
-
-export default class Header extends Component{
-    render(){
+import { Link } from 'react-router-dom'
+import { Container } from '@material-ui/core'
+import { Telegram, LinkedIn, Facebook } from '@material-ui/icons';
+export default class Header extends Component {
+  render() {
     return (
-    
-      <div className="header">
-       <a href="/"> <img className="header-logo" src={logo} alt="Logo" /></a>
-        <nav className="header-nav">
-          
-            <ul className="nav-menu">
-              <li className="nav-menu-items"><a href="/">Home</a></li>
-              <li className="nav-menu-items"><a href="/about">About</a></li>
-              <li className="nav-menu-items"><a href="services">SERVICES</a></li>
-              <li className="nav-menu-items"><a href="history">History</a></li>
-              <li className="nav-menu-items"><a href="team">Team</a></li>
-              <li className="nav-menu-items"><a href="portfolio">Portfolio</a></li>
-              <li className="nav-menu-items"><a href="prices">Prices</a></li>
-              <li className="nav-menu-items"><a href="blog">Blog</a></li>
-              <li className="nav-menu-items"><a href="contact">contact</a></li>
+      <Container maxWidth="lg">
+        <header className="header">
+          <Link to="/"> <img className="header_logo" src={logo} alt="Logo" /></Link>
+
+          <nav className="header_nav">
+
+            <ul className="nav_menu">
+              <li className="nav_menu_items"><Link to="/">Home</Link></li>
+              <li className="nav_menu_items"><Link to="/about">About</Link></li>
+              <li className="nav_menu_items"><Link to="/services">SERVICES</Link></li>
+              <li className="nav_menu_items"><Link to="/history">History</Link></li>
+              <li className="nav_menu_items"><Link to="/team">Team</Link></li>
+              <li className="nav_menu_items"><Link to="/portfolio">Portfolio</Link></li>
+              <li className="nav_menu_items"><Link to="/prices">Prices</Link></li>
+              <li className="nav_menu_items"><Link to="/blog">Blog</Link></li>
+              <li className="nav_menu_items"><Link to="/contact">contact</Link></li>
             </ul>
-           
-        </nav>
-      </div>
-        
- 
-    )}; 
+
+          </nav>
+
+          <div className="social">
+            <a className="social_link" href="/"> <LinkedIn /> </a>
+            <a className="social_link" href="/"> <Facebook /> </a>
+            <a className="social_link" href="/"> <Telegram /> </a>
+          </div>
+        </header>
+      </Container>
+
+
+    )
+  };
 };

@@ -1,0 +1,52 @@
+@import "../../fonts/fonts.scss";
+.banner {
+    text-align: center;
+    background: url('../../img/Image.jpg') no-repeat center / cover;
+    width: 100%;
+    .banner_content {
+        padding: 150px 0 150px;
+        .banner_text {
+            margin-bottom: 50px;
+            .who-are-we {
+                font-family: Crimson;
+                font-weight: lighter;
+                color: rgba(255, 255, 255, 0.747);
+            }
+            .atlantida {
+                color: rgba(255, 255, 255, 0.801);
+                background: url('../../img/Line.png') no-repeat center / contain;
+                padding: 20px 0 20px 0;
+                margin: 10px;
+                font-size: 40px;
+                font-family: Amsdam;
+                font-weight: lighter;
+                text-transform: uppercase;
+            }
+        }
+        .btn {
+            position: relative;
+            border: 2px solid white;
+            padding: 7px 25px;
+            color: white;
+            transition: 1s;
+            font-family: Crimson;
+            text-transform: initial;
+            font-size: 20px;
+        }
+        .btn::after {
+            content: '';
+            position: absolute;
+            background: url('../../img/Arrow.png') no-repeat;
+            left: 63px;
+            top: 36px;
+            width: 100px;
+            height: 100px;
+        }
+        .btn:hover {
+            transition: 0.7s;
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.281);
+            background: rgba(255, 255, 255, 0.274);
+        }
+    }
+}
