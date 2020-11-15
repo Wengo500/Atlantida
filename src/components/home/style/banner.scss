@@ -1,7 +1,8 @@
-@import "../../fonts/fonts.scss";
+@import "../../../fonts/fonts.scss";
+@import '../../styles/variables.scss';
 .banner {
     text-align: center;
-    background: url('../../img/Image.jpg') no-repeat center / cover;
+    background: url('../../../img/Image.jpg') no-repeat center / cover;
     width: 100%;
     .banner_content {
         padding: 150px 0 150px;
@@ -10,11 +11,11 @@
             .who-are-we {
                 font-family: Crimson;
                 font-weight: lighter;
-                color: rgba(255, 255, 255, 0.747);
+                color: $light-gray;
             }
             .atlantida {
-                color: rgba(255, 255, 255, 0.801);
-                background: url('../../img/Line.png') no-repeat center / contain;
+                color: $light-gray;
+                background: url('../../../img/Line.png') no-repeat center / contain;
                 padding: 20px 0 20px 0;
                 margin: 10px;
                 font-size: 40px;
@@ -25,9 +26,9 @@
         }
         .btn {
             position: relative;
-            border: 2px solid white;
+            border: 2px solid $light-gray;
             padding: 7px 25px;
-            color: white;
+            color: $light-gray;
             transition: 1s;
             font-family: Crimson;
             text-transform: initial;
@@ -36,7 +37,7 @@
         .btn::after {
             content: '';
             position: absolute;
-            background: url('../../img/Arrow.png') no-repeat;
+            background: url('../../../img/Arrow.png') no-repeat;
             left: 63px;
             top: 36px;
             width: 100px;

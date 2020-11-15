@@ -1,0 +1,52 @@
+@import '../../fonts/fonts.scss';
+@import './variables.scss';
+.section {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 30px;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    padding: 30px 20px 40px;
+    text-transform: uppercase;
+    font-family: Amsdam;
+    color: $dark-gray;
+    &::after {
+        content: '';
+        position: absolute;
+        background: url('../../img/titleLineBlack.png') no-repeat center / cover;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        top: 70px;
+    }
+}
+
+.text {
+    font-family: Crimson;
+    margin-bottom: 40px;
+}
+
+.button {
+    border: 2px solid $dark-gray;
+    padding: 7px 5px;
+    text-transform: initial;
+    margin: 3px;
+    width: 120px;
+    transition: 0.7s;
+    &:hover {
+        transform: scale(1.06);
+        box-shadow: 0 0 40px rgba(90, 90, 90, 0.76);
+        background: rgba(173, 173, 173, 0.712);
+    }
+}
+
+.btn-dark {
+    background: $dark-gray;
+    color: white;
+    &:hover {
+        color: $dark-gray;
+    }
+}

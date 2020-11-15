@@ -1,20 +1,17 @@
-import React, {Component} from 'react'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
-import About from '../pages/About'
+import Portfolio from '../pages/Portfolio'
 
-export default class Main extends Component{
-    render(){
+export default class Main extends Component {
+  render() {
     return (
-      <Router>
-      <main className="main">
-        <Switch>
-          <Home />
-          <Route  path="/" name="Home" сomponent={Home} />
-          <Route  path="/about" name="About" сomponent={About} />
-        </Switch>
-      </main>
-      </Router>
-
-    )};
+      <Switch>
+        <main className="main">
+          <Route exact path="/" name="Home" render={() => <Home />} />
+          <Route path="/portfolio" name="Portfolio" render={() => <Portfolio />} />
+        </main>
+      </Switch>
+    )
+  };
 };

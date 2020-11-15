@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './styles/header.scss'
-import logo from '../img/Logo.png'
+import Logo from '../img/Logo.png'
 import { Link } from 'react-router-dom'
 import { Container } from '@material-ui/core'
 import { Telegram, LinkedIn, Facebook } from '@material-ui/icons';
@@ -9,7 +9,7 @@ export default class Header extends Component {
     return (
       <Container maxWidth="lg">
         <header className="header">
-          <Link to="/"> <img className="header_logo" src={logo} alt="Logo" /></Link>
+          <Link to="/"> <img className="header_logo" src={Logo} alt="Logo" /></Link>
 
           <nav className="header_nav">
 
