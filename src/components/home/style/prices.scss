@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+.prices__wrapper {
+    display: flex;
+    justify-content: center;
+    .item__prices {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        width: 27%;
+        padding-bottom: 30px;
+        color: $dark-gray;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        .item__title {
+            text-transform: uppercase;
+            font-family: Montserrat;
+            margin: 20px 0;
+        }
+        .services__blok {
+            border-top: 1px solid rgba(128, 128, 128, 0.801);
+            width: 70%;
+            border-left: transparent;
+            border-right: transparent;
+            border-bottom: transparent;
+        }
+        .item__img {
+            font-size: 35px;
+            padding: 5px;
+        }
+        .icon-border {
+            border: 1px solid rgba(128, 128, 128, 0.801);
+            border-radius: 50%;
+        }
+        .item__price {
+            position: relative;
+            font-size: 80px;
+            font-weight: bolder;
+            font-family: Montserrat;
+            margin-bottom: 10px;
+            &::before {
+                content: '$';
+                position: absolute;
+                top: 0;
+                left: -23px;
+                font-size: 40px;
+            }
+        }
+        .item__text {
+            width: 50%;
+            padding: 0 15px;
+            margin-bottom: 25px;
+            font-family: Crimson;
+            font-style: italic;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            line-height: 20px;
+        }
+    }
+}

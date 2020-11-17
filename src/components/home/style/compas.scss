@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+@import '../../../fonts/fonts.scss';
+.compas {
+    background: #232329;
+    color: $light-gray;
+    .content-wrap {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        .text-wrap {
+            max-width: 60%;
+            margin: 20px 60px 20px 30px;
+            .compas__title {
+                margin-bottom: 10px;
+                font-family: Montserrat;
+            }
+            .compas__text {
+                font-family: Crimson;
+                font-style: italic;
+                color: $gray;
+            }
+        }
+    }
+}
+
+.btn-white {
+    border: 1px solid $light-gray;
+    color: $light-gray;
+    &:hover {
+        box-shadow: 0 0 20px rgb(109, 107, 107);
+    }
+}

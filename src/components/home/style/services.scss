@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+.services {
+    width: 100%;
+    background: url('../../../img/servicesBg.jpg') no-repeat center / cover;
+    .wrapper {
+        display: flex;
+        .services__blok {
+            width: 300px;
+            color: $light-gray;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            .blok__title {
+                text-transform: uppercase;
+            }
+            .text-wrapper {
+                padding: 15px;
+                .blok__text {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 15;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+.icon {
+    padding: 10px;
+}

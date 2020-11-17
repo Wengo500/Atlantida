@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+@import '../../../fonts/fonts.scss';
+.clients {
+    background: white;
+}
+
+.clients-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

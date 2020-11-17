@@ -4,6 +4,7 @@
     text-align: center;
     background: url('../../../img/Image.jpg') no-repeat center / cover;
     width: 100%;
+    margin-bottom: 60px;
     .banner_content {
         padding: 150px 0 150px;
         .banner_text {
@@ -40,8 +41,8 @@
             background: url('../../../img/Arrow.png') no-repeat;
             left: 63px;
             top: 36px;
-            width: 100px;
-            height: 100px;
+            width: 15px;
+            height: 50px;
         }
         .btn:hover {
             transition: 0.7s;

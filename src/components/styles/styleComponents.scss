@@ -2,14 +2,14 @@
 @import './variables.scss';
 .section {
     text-align: center;
-    margin-top: 60px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 
-.title {
+.title,
+.title-light {
     display: inline-block;
     position: relative;
-    padding: 30px 20px 40px;
+    padding: 50px 20px 40px;
     text-transform: uppercase;
     font-family: Amsdam;
     color: $dark-gray;
@@ -20,32 +20,48 @@
         width: 100%;
         height: 3px;
         left: 0;
-        top: 70px;
+        top: 90px;
     }
 }
 
-.text {
+.title-light {
+    color: $light-gray;
+    &::after {
+        background: url('../../img/titleLineLight.png') no-repeat center / cover;
+    }
+}
+
+.text,
+.light-text {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
     font-family: Crimson;
     margin-bottom: 40px;
+}
+
+.light-text {
+    color: $light-gray;
 }
 
 .button {
     border: 2px solid $dark-gray;
     padding: 7px 5px;
-    text-transform: initial;
+    text-transform: inherit;
     margin: 3px;
     width: 120px;
     transition: 0.7s;
+    font-family: Montserrat;
     &:hover {
         transform: scale(1.06);
-        box-shadow: 0 0 40px rgba(90, 90, 90, 0.76);
-        background: rgba(173, 173, 173, 0.712);
+        box-shadow: 0 0 40px rgba(90, 90, 90, 0.651);
+        background: rgba(173, 173, 173, 0.486);
     }
 }
 
 .btn-dark {
     background: $dark-gray;
-    color: white;
+    color: $light-gray;
     &:hover {
         color: $dark-gray;
     }

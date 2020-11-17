@@ -20,7 +20,28 @@ export default class About extends Component {
             <button className="button">Portfolio</button>
           </div>
         </div>
-
+        <div className="statistics">
+          <div className="statistics__item">
+            <div className="statistics__img" />
+            <p className="statistics__txt">AWARDS WINNER</p>
+            <span className="statistics__number">54</span>
+          </div>
+          <div className="statistics__item">
+            <div className=" statistics__img-2" />
+            <p className="statistics__txt">JOBS DONE</p>
+            <span className="statistics__number">1500</span>
+          </div>
+          <div className="statistics__item">
+            <div className=" statistics__img-3" />
+            <p className="statistics__txt">HAPPY CLIENTS</p>
+            <span className="statistics__number ">120</span>
+          </div>
+          <div className="statistics__item">
+            <div className=" statistics__img-4" />
+            <p className="statistics__txt">reviews recieved</p>
+            <span className="statistics__number">211</span>
+          </div>
+        </div>
       </Container>
 
     )
