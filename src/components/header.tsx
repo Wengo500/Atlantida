@@ -19,14 +19,15 @@ export default class Header extends Component {
 
               <ul className="nav_menu">
                 <li className="nav_menu_items"><Link to="/">Home</Link></li>
-                <li className="nav_menu_items"><Link to="/about">About</Link></li>
-                <li className="nav_menu_items"><Link to="/services">SERVICES</Link></li>
+                <li className="nav_menu_items"><a href="#about">About</a></li>
+                <li className="nav_menu_items"><a href="#services">SERVICES</a></li>
+                <li className="nav_menu_items"><a href="#prices">Prices</a></li>
+                <li className="nav_menu_items"><a href="#blog">Blog</a></li>
                 <li className="nav_menu_items"><Link to="/history">History</Link></li>
                 <li className="nav_menu_items"><Link to="/team">Team</Link></li>
                 <li className="nav_menu_items"><Link to="/portfolio">Portfolio</Link></li>
-                <li className="nav_menu_items"><Link to="/prices">Prices</Link></li>
-                <li className="nav_menu_items"><Link to="/blog">Blog</Link></li>
                 <li className="nav_menu_items"><Link to="/contact">contact</Link></li>
+
               </ul>
 
             </nav>

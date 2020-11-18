@@ -1,0 +1,87 @@
+@import '../styles/variables.scss';
+@import '../../fonts/fonts.scss';
+.footer {
+    background: url('../../img/footerBg.jpg') no-repeat center / cover;
+    padding: 50px 0;
+    .logo {
+        display: block;
+        position: relative;
+        padding: 0 0 30px 40px;
+        font-size: larger;
+        text-transform: uppercase;
+        color: $light-gray;
+        &::before {
+            content: '';
+            position: absolute;
+            background: url('../../img/footerLogoIcon.png') no-repeat center / contain;
+            width: 40px;
+            height: 40px;
+            top: -8px;
+            left: -10px;
+        }
+    }
+    .footer__content-wrapper {
+        display: flex;
+        position: relative;
+        padding-bottom: 40px;
+        border-bottom: 1px solid;
+        border-image: linear-gradient(to left, transparent, rgb(55, 54, 63), rgb(58, 58, 77), rgb(55, 54, 63), transparent) 90;
+        .footer__text {
+            max-width: 29%;
+            font-family: Crimson;
+            color: gray;
+            .studio-name {
+                display: block;
+                color: $light-gray;
+                text-transform: uppercase;
+                margin: 20px 0;
+                font-family: Montserrat;
+            }
+            .contacts {
+                display: block;
+                color: $light-gray;
+                margin: 20px 0;
+                font-family: Montserrat;
+            }
+        }
+    }
+    .footer__form {
+        display: grid;
+        margin-left: 40px;
+        grid-template-columns: 60% 60%;
+        grid-template-rows: 50px 50px 140px;
+        grid-column-gap: 20px;
+        grid-row-gap: 15px;
+        grid-template-areas: "input-1 inpu-2 ""input-3 input-4" "textarea textarea";
+        .input {
+            padding: 10px;
+            background: transparent;
+            border: 1px solid rgb(94, 92, 92);
+            color: $light-gray;
+            font-size: larger;
+        }
+        .input-1 {
+            grid-area: input-1;
+        }
+        .input-3 {
+            grid-area: input-3;
+        }
+        .textarea {
+            grid-area: textarea;
+        }
+        .btn-color {
+            background: gray;
+            color: white;
+            margin: auto 0;
+            &:hover {
+                box-shadow: rgba(128, 128, 128, 0.651) 0 0 30px 1px;
+            }
+        }
+    }
+    .copyright {
+        color: $gray;
+        font-family: Crimson;
+        font-style: italic;
+        margin-top: 40px;
+    }
+}

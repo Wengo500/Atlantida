@@ -8,7 +8,7 @@ export default class Banner extends Component {
   render() {
     return (
       <Container maxWidth="lg">
-        <div className="prices section">
+        <div id="prices" className="prices section">
           <span className="title ">prices</span>
           <p className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aliquid repudiandae optio eum maiores id amet sequi perferendis, dokeldem aspernatur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, tempora.</p>
           <div className="prices__wrapper">

@@ -17,6 +17,7 @@
                 padding: 30px;
                 height: 25.5vw;
                 color: $gray;
+                overflow: hidden;
                 .blog-item__date {
                     color: $light-gray;
                     font-family: Crimson;
@@ -32,7 +33,6 @@
                     color: $light-gray;
                     font-family: Montserrat;
                     padding: 20px 15px;
-                    font-size: 1vw;
                     &::before {
                         content: '\25B6';
                         position: absolute;
@@ -42,7 +42,7 @@
                     }
                 }
                 .blog-item__text {
-                    // height: 16vw;
+                    max-height: 200px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;

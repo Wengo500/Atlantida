@@ -9,7 +9,7 @@ export default class About extends Component {
     return (
       <Container maxWidth="lg">
 
-        <div className="about section">
+        <div id='about' className="about section">
           <img src={AmoutImg} alt="about img" className="about__img" />
           <span className="title">
             about us

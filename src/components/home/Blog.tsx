@@ -10,7 +10,7 @@ import Blog4 from '../../img/blog/Blog4.jpg'
 export default class Blog extends Component {
   render() {
     return (
-      <div className="blog section">
+      <div id="blog" className="blog section">
         <Container maxWidth="lg">
           <span className="title ">blog</span>
           <p className="text"> Architecto aliquid repudiandae optio eum maiores id amet sequi perferendis, dokeldem aspernatur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, Lorem ipsum dolor sit. tempora.</p>

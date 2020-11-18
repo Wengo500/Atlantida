@@ -53,6 +53,11 @@
             border-radius: 10px;
         }
         
-        .slide:focus {
+        .slide:focus,
+         :focus {
             outline: none;
+        }
+        
+        textarea {
+            resize: none;
         }
