@@ -17,9 +17,15 @@ import most from '../../img/portfolio/most.jpg'
 export default class Gallery extends Component {
   render() {
     return (
-      <div className="gallery-wrapper">
+      
+      <div className="gallery-wrapper section">
+         <Container maxWidth="lg">
+         <span className="title-light">portfolio</span>
+          <p className="light-text "> Architecto aliquid repudiandae optio eum maiores id amet sequi perferendis, dokeldem aspernatur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, Lorem ipsum dolor sit. tempora.</p>
+          </Container>
       <Container maxWidth="lg">
       <div className="gallery">
+         
         
           <ReactFancyBox className="gallery__img forest" thumbnail={forest} image={forest}/>
           <ReactFancyBox className="gallery__img forest-dark" thumbnail={forestDark} image={forestDark}/>
