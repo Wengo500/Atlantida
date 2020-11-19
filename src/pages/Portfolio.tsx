@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Gallery from '../components/portfolio/Gallery'
 
 export default class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio">
-        <h1>dcdcdc</h1>
+        <Gallery />
       </div>
 
     );

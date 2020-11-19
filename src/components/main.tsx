@@ -5,6 +5,7 @@ import Portfolio from '../pages/Portfolio'
 
 export default class Main extends Component {
   render() {
+
     return (
       <Switch>
         <main className="main">

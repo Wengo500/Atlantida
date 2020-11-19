@@ -14,9 +14,16 @@
         .nav_menu {
             display: flex;
             .nav_menu_items>a {
-                padding-right: 20px;
+                display: block;
+                padding: 10px;
                 text-transform: uppercase;
                 color: rgb(121, 122, 122);
+                transition: .7s;
+                &:hover {
+                    text-shadow: rgb(56, 55, 55) 0 0 20px, rgb(56, 55, 55) 0 0 30px;
+                    transform: scale(1.1);
+                    color: rgb(63, 62, 62);
+                }
             }
         }
     }

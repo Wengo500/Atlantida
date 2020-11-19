@@ -68,5 +68,9 @@
 }
 
 .social_link {
+    display: inline-block;
     color: rgb(121, 122, 122);
+    &:hover {
+        transform: scale(1.1);
+    }
 }

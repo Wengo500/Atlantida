@@ -11,7 +11,6 @@ export default class Banner extends Component {
             <h1 className="atlantida">we are atlantida</h1>
           </div>
           <a href="#about" className="btn">Get Started</a>
-
         </div>
       </main>
     )
