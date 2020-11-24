@@ -15,7 +15,6 @@ export default class App extends Component {
       const oldState = this.state.dark;
       const newState = !oldState;
           this.setState({ dark: newState });
-        
     }
     return (
       <div className="App">
