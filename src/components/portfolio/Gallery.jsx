@@ -20,13 +20,11 @@ export default class Gallery extends Component {
       
       <div className="gallery-wrapper section">
          <Container maxWidth="lg">
-         <span className="title-light">portfolio</span>
-          <p className="light-text "> Architecto aliquid repudiandae optio eum maiores id amet sequi perferendis, dokeldem aspernatur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, Lorem ipsum dolor sit. tempora.</p>
+         <span className="portfolio-text title-light">portfolio</span>
+          <p className="portfolio-text light-text "> Architecto aliquid repudiandae optio eum maiores id amet sequi perferendis, dokeldem aspernatur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, Lorem ipsum dolor sit. tempora.</p>
           </Container>
       <Container maxWidth="lg">
       <div className="gallery">
-         
-        
           <ReactFancyBox className="gallery__img forest" thumbnail={forest} image={forest}/>
           <ReactFancyBox className="gallery__img forest-dark" thumbnail={forestDark} image={forestDark}/>
           <ReactFancyBox className="gallery__img forest3" thumbnail={forest3} image={forest3}/>
@@ -36,8 +34,6 @@ export default class Gallery extends Component {
           <ReactFancyBox className="gallery__img ocean-fog" thumbnail={oceanFog} image={oceanFog}/>
           <ReactFancyBox className="gallery__img dark-rocks" thumbnail={darkRocks} image={darkRocks}/>
           <ReactFancyBox className="gallery__img most" thumbnail={most} image={most}/>
-
-
       </div> 
       </Container>
       </div>

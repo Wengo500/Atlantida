@@ -1,0 +1,25 @@
+       .comment {
+           display: flex;
+           text-align: start;
+           margin: 10px;
+           background: rgba(117, 115, 115, 0.281);
+       }
+       
+       .comment-wrapper {
+           padding: 5px;
+       }
+       
+       .user-avatar {
+           width: 70px;
+           height: 70px;
+           left: -70px;
+           top: 0;
+       }
+       
+       .user-name {
+           color: green;
+       }
+       
+       .user-comment {
+           color: darkslategrey
+       }

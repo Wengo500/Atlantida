@@ -9,7 +9,6 @@
         }
         
         body {
-            background: $main-color;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -38,9 +37,7 @@
         
          ::selection {
             color: $light-gray;
-            /* Цвет текста */
             background: $dark-gray;
-            /* Цвет фона */
         }
         
         body::-webkit-scrollbar {
