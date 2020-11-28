@@ -7,6 +7,7 @@ import Compass from '../components/home/Compass';
 import Blog from '../components/home/Blog';
 import Clients from '../components/home/Clients';
 import ClientSlider from '../components/home/ClientSlider';
+import Maps from '../components/home/Map'
 export default class Home extends Component {
   render() {
     return (
@@ -16,11 +17,11 @@ export default class Home extends Component {
         <Services />
         <Prices />
         <Compass />
-        <Blog />
+        <Blog /> 
         <Clients />
         <ClientSlider />
+        <Maps />
       </div>
-
     );
   };
 };

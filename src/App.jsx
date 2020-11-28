@@ -19,7 +19,10 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header changeState={changeState} mainColor={this.state.dark}/>
-        <Main changeState={changeState} mainColor={this.state.dark}/>
+        <Main 
+        changeState={this.props.changeState} 
+        mainColor={this.state.dark} 
+        state={this.props.state} />
         <Footer />
       </div> 
     );

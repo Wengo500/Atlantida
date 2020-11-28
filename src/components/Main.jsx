@@ -9,13 +9,17 @@ export default class Main extends Component {
   render(props) {
  const mainClasses = ['main'];
      if(this.props.mainColor === true) mainClasses.push("main-dark");
-
     return (
       <Switch>
         <main className={mainClasses.join(' ')}>
           <Route exact path="/" name="Home" render={() => <Home />} />
           <Route path="/portfolio" name="Portfolio" render={() => <Portfolio />} />
-          <Route path="/forum" name="forum" render={() => <Forum />} />
+          <Route path="/forum" name="forum" render={() => 
+            <Forum
+              state={this.props.state}
+              changeState={this.props.changeState} 
+            />}
+          />
         </main>
       </Switch>
     )

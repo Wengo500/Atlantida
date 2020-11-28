@@ -8,7 +8,7 @@ export default  class UserComment extends Component {
     return (
       <div className="App">
         <div className="comment">
-          <img className="user-avatar" src={this.props.comment.avatar} alt="Avatar"/>
+          <img className="user-avatar" src={this.props.comment.avatar} alt="User Avatar"/>
           <div className="comment-wrapper">
             <p className="user-name">{this.props.comment.name}</p>
             <p className="user-comment">{this.props.comment.comment}</p>
