@@ -16,6 +16,7 @@ export default class Services extends Component {
           <span className="services__title  title-light ">services</span>
           <p className="light-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aliquid repudiandae optio eum maiores id amet sequi perferendis, aspernatur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, tempora.</p>
           <div className="wrapper">
+
             <fieldset className="services__blok">
               <legend >
                 <Lamp fontSize="large" className="services__icon" />
@@ -32,7 +33,9 @@ export default class Services extends Component {
               <span className="blok__title">WEBSITE  <br /> DESIGN</span>
               <div className="text-wrapper">
                 <p className="blok__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt necessitatibus quas quisquam, excepturi repellat repudiandae doloremque id corporis ducimus, voluptate cumque neque nemo expedita consequuntur voluptas? Cumque commodi laborum sit nobis eius repellendus nemo, vone nostrum officia distinctio, maiores, quidem quasi tempore corporis, magni saepe porro qui possimus. Inventore, modi.</p>
-              </div>            </fieldset>
+              </div>
+            </fieldset>
+
             <fieldset className="services__blok">
               <legend>
                 <Timeline fontSize="large" className="services__icon" />

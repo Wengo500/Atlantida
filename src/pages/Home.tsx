@@ -7,7 +7,7 @@ import Compass from '../components/home/Compass';
 import Blog from '../components/home/Blog';
 import Clients from '../components/home/Clients';
 import ClientSlider from '../components/home/ClientSlider';
-import Maps from '../components/home/Map'
+import Maps from '../components/Map'
 export default class Home extends Component {
   render() {
     return (

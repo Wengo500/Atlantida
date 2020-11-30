@@ -1,6 +1,7 @@
         @import './components/styles/variables.scss';
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
         
         * {

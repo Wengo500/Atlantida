@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import './styles/footer.scss'
-import { Link } from 'react-router-dom'
-import { Container } from '@material-ui/core'
+import React, { Component } from 'react';
+import './styles/footer.scss';
+import './styles/@media.scss';
+import { Link } from 'react-router-dom';
+import { Container } from '@material-ui/core';
 import { Telegram, LinkedIn, Facebook } from '@material-ui/icons';
 
 

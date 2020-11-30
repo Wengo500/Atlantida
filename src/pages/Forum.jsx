@@ -6,13 +6,14 @@ import '../components/styles/styleComponents.scss';
 
 let newPostMessage = React.createRef()
 let newPostUserName = React.createRef()
+
 export default class Forum extends Component {
  addComment() { 
    let userMessage = newPostMessage.current.value;
    let userName = newPostUserName.current.value;
 
    if (userMessage && userName !== '') {
-        this.props.changeState(userName, userMessage);
+        this.props.changeColorThem(userName, userMessage);
    } else {
      alert('Please write your name and message')
    }

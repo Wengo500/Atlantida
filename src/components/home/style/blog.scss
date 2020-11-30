@@ -1,9 +1,9 @@
 @import '../../styles/variables.scss';
 @import '../../../fonts/fonts.scss';
 .blog {
-    width: 100%;
+    // width: 100%;
     padding-bottom: 0;
-    .blog-conten__wrapper {
+    .blog-content__wrapper {
         text-align: start;
         display: flex;
         .blog-item {

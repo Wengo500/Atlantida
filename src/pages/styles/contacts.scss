@@ -1,0 +1,38 @@
+.pageContacts {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    .pageContacts-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        .inform {
+            text-align: start;
+            font-family: Crimson;
+            margin: 0 50px 0;
+            .studio-name {
+                display: block;
+                margin: 20px 0;
+                text-transform: uppercase;
+            }
+            .conInfo {
+                display: block;
+                margin: 20px 0;
+            }
+            .contacts {
+                display: block;
+                margin: 20px 0;
+                color: rgb(41, 41, 43);
+                font-family: Montserrat;
+            }
+            .social_link {
+                color: rgb(41, 41, 43);
+            }
+        }
+        .map {
+            width: 50vw;
+            height: 500px;
+            margin-left: 100px;
+        }
+    }
+}

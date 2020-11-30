@@ -12,6 +12,7 @@ export default class Banner extends Component {
           <span className="title ">prices</span>
           <p className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aliquid repudiandae optio eum maiores id amet sequi perferendis, dokeldem aspernatur dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, tempora.</p>
           <div className="prices__wrapper">
+
             <div className="item__prices">
               <span className="item__title">basic</span>
               <fieldset className="services__blok">
@@ -23,6 +24,7 @@ export default class Banner extends Component {
               <p className="item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iusto sapiente eaque dignissimos magnam minus explicabo iure esse. Repellat, ut!</p>
               <button className="button">Sing Up</button>
             </div>
+
             <div className="item__prices">
               <span className="item__title">ADVANCED</span>
               <fieldset className="services__blok">

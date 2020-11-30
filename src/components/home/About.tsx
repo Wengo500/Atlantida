@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './style/about.scss';
-import '../styles/styleComponents.scss'
+import '../styles/@media.scss';
+import '../styles/styleComponents.scss';
 import { Container } from '@material-ui/core';
-import AmoutImg from '../../img/aboutBg.jpg'
+import AmoutImg from '../../img/aboutBg.jpg';
 
 export default class About extends Component {
   render() {
@@ -19,8 +20,10 @@ export default class About extends Component {
             <button className="button btn-dark">Contact us</button>
             <button className="button">Portfolio</button>
           </div>
+
         </div>
         <div className="statistics">
+
           <div className="statistics__item">
             <div className="statistics__img" />
             <p className="statistics__txt">AWARDS WINNER</p>

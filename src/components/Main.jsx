@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import './styles/main.scss'
+import './styles/main.scss';
 import Home from '../pages/Home';
 import Portfolio from '../pages/Portfolio';
 import Forum from '../pages/Forum';
+import Contacts from '../pages/Contacts';
 
 export default class Main extends Component {
   render(props) {
@@ -20,6 +21,8 @@ export default class Main extends Component {
               changeState={this.props.changeState} 
             />}
           />
+          <Route path="/contact" name="Contacts" render={() => <Contacts />} />
+
         </main>
       </Switch>
     )

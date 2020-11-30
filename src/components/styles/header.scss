@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     background: #fff;
-    z-index: 20;
+    z-index: 25;
     transition: 1s;
     .header__content {
         display: flex;
@@ -12,6 +12,10 @@
         padding: 15px;
     }
     .header_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 78%;
         .nav_menu {
             display: flex;
             .nav_menu_items>a {
@@ -27,6 +31,9 @@
                 }
             }
         }
+    }
+    .burger-btn {
+        display: none;
     }
 }
 
