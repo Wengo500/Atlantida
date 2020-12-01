@@ -5,7 +5,7 @@ import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 import state from './redux/state';
-import {changeState, subscribe} from './redux/state'
+import {newComment, subscribe, changeColorThem, changeBurgerMenu, renderBurgerBtn} from './redux/state'
 
 let rerenderDOM = (state) => {
 
@@ -13,7 +13,11 @@ let rerenderDOM = (state) => {
 
     <React.StrictMode>
       <BrowserRouter>
-        <App state={state} changeState={changeState}/>
+        <App 
+        state={state} 
+        newComment={newComment} 
+        changeColorThem={changeColorThem} 
+        changeBurgerMenu={changeBurgerMenu} renderBurgerBtn={renderBurgerBtn}/>
       </BrowserRouter>
     </React.StrictMode>,
 

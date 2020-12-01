@@ -8,8 +8,9 @@ import Contacts from '../pages/Contacts';
 
 export default class Main extends Component {
   render(props) {
+
  const mainClasses = ['main'];
-     if(this.props.mainColor === true) mainClasses.push("main-dark");
+     if(this.props.state.dark === true) mainClasses.push("main-dark");
     return (
       <Switch>
         <main className={mainClasses.join(' ')}>
@@ -18,7 +19,7 @@ export default class Main extends Component {
           <Route path="/forum" name="forum" render={() => 
             <Forum
               state={this.props.state}
-              changeState={this.props.changeState} 
+              newComment={this.props.newComment} 
             />}
           />
           <Route path="/contact" name="Contacts" render={() => <Contacts />} />

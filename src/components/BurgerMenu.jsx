@@ -10,12 +10,12 @@ export default class HeaderBurger extends Component {
  
   render(props) {
 
-     const renderThemIcon = () => {
-       if(this.props.mainColor === true)  return <Sun onClick={ this.props.changeState} className="sun-icon"/>
-        else return <Moon onClick={ this.props.changeState} className="moon-icon"/>
+      const renderThemIcon = () => {
+       if(this.props.state.dark === true)  return <Sun onClick={() => this.props.changeColorThem()} className="sun-icon"/>
+        else return <Moon onClick={() => this.props.changeColorThem()} className="moon-icon"/>
      }
     let burgerClasses = ["burger"]
-    if(this.props.burger === true) {
+    if(this.props.state.burger === true) {
       burgerClasses.push('burger-true')
 }
     return (

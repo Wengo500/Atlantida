@@ -11,11 +11,12 @@ import Moon from '@material-ui/icons/Brightness3Outlined';
 export default class Header extends Component {
  
   render(props) {
+    console.log(this.props.renderBurgerBtn)
     const headerClasses = ['header'];
-     if(this.props.mainColor === true) headerClasses.push("header-dark");
+     if(this.props.state.dark === true) headerClasses.push("header-dark");
      const renderThemIcon = () => {
-       if(this.props.mainColor === true)  return <Sun onClick={ this.props.changeColorThem} className="sun-icon"/>
-        else return <Moon onClick={ this.props.changeColorThem} className="moon-icon"/>
+       if(this.props.state.dark === true)  return <Sun onClick={() => this.props.changeColorThem()} className="sun-icon"/>
+        else return <Moon onClick={() => this.props.changeColorThem()} className="moon-icon"/>
      }
     return (
       <header className={headerClasses.join(' ')} >

@@ -13,7 +13,7 @@ export default class Forum extends Component {
    let userName = newPostUserName.current.value;
 
    if (userMessage && userName !== '') {
-        this.props.changeColorThem(userName, userMessage);
+        this.props.newComment(userName, userMessage);
    } else {
      alert('Please write your name and message')
    }
