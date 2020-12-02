@@ -19,7 +19,10 @@ export default class App extends Component {
           changeBurgerMenu={this.props.changeBurgerMenu}
           changeColorThem={this.props.changeColorThem} 
           state={this.props.state}/>
-        <BurgerMenu state={this.props.state} changeColorThem={this.props.changeColorThem}  />
+        <BurgerMenu 
+         state={this.props.state}
+         changeBurgerMenu={this.props.changeBurgerMenu} 
+         changeColorThem={this.props.changeColorThem}  />
         <Main 
           newComment={this.props.newComment} 
           state={this.props.state} />

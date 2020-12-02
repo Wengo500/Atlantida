@@ -14,16 +14,15 @@ export default class Main extends Component {
     return (
       <Switch>
         <main className={mainClasses.join(' ')}>
-          <Route exact path="/" name="Home" render={() => <Home />} />
-          <Route path="/portfolio" name="Portfolio" render={() => <Portfolio />} />
-          <Route path="/forum" name="forum" render={() => 
+          <Route exact path="/portfolio" name="Portfolio" render={() => <Portfolio />} />
+          <Route exact path="/forum" name="forum" render={() => 
             <Forum
               state={this.props.state}
               newComment={this.props.newComment} 
             />}
           />
-          <Route path="/contact" name="Contacts" render={() => <Contacts />} />
-
+          <Route exact path="/contact" name="Contact" render={() => <Contacts />} />
+          <Route exact path="/" name="Home" render={() => <Home />} />
         </main>
       </Switch>
     )

@@ -43,7 +43,7 @@ export default class Header extends Component {
                   <a className="social_link" href="/"> <Telegram /> </a>
                 </div>
               </nav>
-    <button className="burger-btn" onClick={this.props.changeBurgerMenu}>{this.props.renderBurgerBtn()}</button>
+           <button className="burger-btn" onClick={this.props.changeBurgerMenu}>{this.props.renderBurgerBtn()}</button>
           </div>
         </Container>
       </header>

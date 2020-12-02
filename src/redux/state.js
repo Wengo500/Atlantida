@@ -8,7 +8,7 @@
      console.log('rerender')
  }
  let state = {
-     dark: true,
+     dark: false,
      burger: false,
      comments: [
          { id: 0, name: "Alex", comment: "Hello World", avatar: 'https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg' },
@@ -20,14 +20,15 @@
  }
  export const renderBurgerBtn = () => {
 
-    if (state.dark === true) {
-     if (state.burger === true) return <CloseIcon  style={{ color: grey[500] }} fontSize = "large" /> ;
-     else  return <MenuIcon style={{ color: grey[500] }} fontSize = "large" /> 
-    } else if (state.burger === true) return <CloseIcon fontSize = "large" /> ;
-     else  return <MenuIcon fontSize = "large" /> 
-     
-   
-        
+     if (state.dark === true) {
+         if (state.burger === true) return <CloseIcon 
+         style = {{ color: grey[500] } }
+         fontSize = "large" /> ;
+         else return <MenuIcon 
+         style = {{ color: grey[500] } }
+         fontSize = "large" />
+     } else if (state.burger === true) return <CloseIcon fontSize = "large" /> ;
+     else return <MenuIcon fontSize = "large" />
  }
 
  export const changeBurgerMenu = () => {

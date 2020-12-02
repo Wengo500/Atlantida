@@ -15,11 +15,16 @@ export default class HeaderBurger extends Component {
         else return <Moon onClick={() => this.props.changeColorThem()} className="moon-icon"/>
      }
     let burgerClasses = ["burger"]
+    let burgerBlackout = []
     if(this.props.state.burger === true) {
       burgerClasses.push('burger-true')
+      burgerBlackout.push('burger-blackout')
 }
     return (
+    <>
+      <div onClick={this.props.changeBurgerMenu} className={burgerBlackout.join(' ')}></div>
       <div className={burgerClasses.join(' ')} >
+
             <nav className="burger__nav">
               <ul className="burger__nav__menu">
                 <li><Link className="burger-menu__items" to="/">Home</Link></li>
@@ -40,8 +45,8 @@ export default class HeaderBurger extends Component {
                   <a className="social_link social_link__burger" href="/"> <Telegram /> </a>
                 </div>
               </nav>
-           
       </div>
+      </>
     )
   };
 
