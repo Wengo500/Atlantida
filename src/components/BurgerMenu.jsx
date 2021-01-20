@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles/burgerMenu.scss';
-import './styles/@media.scss';
 import { Link } from 'react-router-dom';
 import { Telegram, LinkedIn, Facebook } from '@material-ui/icons';
 import Sun from '@material-ui/icons/WbSunnyOutlined';

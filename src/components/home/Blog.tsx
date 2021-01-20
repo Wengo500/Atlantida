@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './style/blog.scss';
-import '../styles/@media.scss';
 import '../styles/styleComponents.scss';
 import { Container } from '@material-ui/core';
 import Blog1 from '../../img/blog/Blog1.jpg'

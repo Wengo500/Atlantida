@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './style/about.scss';
-import '../styles/@media.scss';
 import '../styles/styleComponents.scss';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';

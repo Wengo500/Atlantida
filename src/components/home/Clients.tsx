@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './style/clients.scss';
 import '../styles/styleComponents.scss';
-import '../styles/@media.scss';
 import { Container } from '@material-ui/core';
 import Logo1 from '../../img/clients/1.png';
 import Logo2 from '../../img/clients/2.png';

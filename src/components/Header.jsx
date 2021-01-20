@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles/header.scss';
-import './styles/@media.scss';
 import logo from '../img/Logo.png';
 import { Link } from 'react-router-dom';
 import { Container } from '@material-ui/core';

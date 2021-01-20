@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './styles/contacts.scss';
 import '../components/styles/styleComponents.scss';
-import '../components/styles/@media.scss'
 import Maps from '../components/Map';
 import { Container } from '@material-ui/core';
 import { Telegram, LinkedIn, Facebook } from '@material-ui/icons';
