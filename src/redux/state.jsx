@@ -16,6 +16,7 @@
          { id: 2, name: "Victoria", comment: "Nice", avatar: 'https://anekdotsuper.ru/assets/cache_image/assets/img/koko/viberr-1_440x0_3a6.jpg' },
          { id: 3, name: "Victoria", comment: "And you?", avatar: 'https://anekdotsuper.ru/assets/cache_image/assets/img/koko/viberr-1_440x0_3a6.jpg' },
      ]
+
  }
  export const renderBurgerBtn = () => {
 

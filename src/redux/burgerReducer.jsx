@@ -1,54 +1,33 @@
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
-import { grey } from '@material-ui/core/colors';
-
-const renderBurgerBtn = 'Render-Burger-Btn';
-const changeBurgerMenu = 'Change-Burger-Menu';
+const BURGER = 'BURGER';
+const BURGER_BLACKOUT = 'BURGER_BLACKOUT';
 
 let initialState = {
-    burger: false
+  burger: false
 }
 
-let burgerReducer = (state=initialState, action) => {
-   
-  console.log( Object.isSealed(state))
+let burgerReducer = (state=initialState.burger, action) => {
   switch(action.type) {
+          
+    case BURGER:
+      return state = !state;
 
-    case changeBurgerMenu:
-     return state.burger = !state.burger;
-    //  return state = !state;
-      
-    case renderBurgerBtn:
-      if (state.dark === true) {
-         if (state.burger === true) return <CloseIcon
-          fontSize = "large"
-          style = {
-             { color: grey[500] }
-          } /> ;
-         
-         else return <MenuIcon
-          fontSize = "large"
-          style = {
-             { color: grey[500] }
-         } />
+    case BURGER_BLACKOUT:
+      return state = false;
 
-     } else 
-     if (state.burger === true) 
-     return <CloseIcon fontSize = "large" /> ;
-     else return <MenuIcon fontSize = "large" />
-
-     default: return state;
+    default: 
+      return state;
   }
-}
 
-export const changeBurgerMenuActionCreator = () => {
+}
+export const burgerBtnActionCreator = () => {
     return {
-    type: changeBurgerMenu
+    type: BURGER
     }
 }
-export const renderBurgerBtnActionCreator = () => {
+export const burgerBlackoutActionCreator = () => {
     return {
-    type: renderBurgerBtn
+    type: BURGER_BLACKOUT
     }
 }
  export default burgerReducer;
+

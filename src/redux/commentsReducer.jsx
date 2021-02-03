@@ -1,6 +1,6 @@
  import UserAnonym from '../img/UserAnonym.jpg';
 
-const newCommentReducer = 'New-Comment-Reducer';
+const NEW_COMMENT_REDUCER = 'NEW_COMMENT_REDUCER';
 
 let initialState = {
    comments: [
@@ -11,26 +11,26 @@ let initialState = {
          ]
 }
 
- const commentsReducer = (state=initialState, action) => {
-switch(action.type) {
+ let commentsReducer = (state=initialState.comments, action) => {
+    switch(action.type) {
 
-  case newCommentReducer: 
-  let id = 0;
-  state.comments.forEach((element, index) => id = index + 1);
-    const newComment = { id: id, userName: action.userName, comment: action.userMessage, avatar: UserAnonym };
-    state.comments.push(newComment);
-    return state;
-    
-    default: return state;
-}
+      case NEW_COMMENT_REDUCER: 
+        let id = 0;
+        state.forEach((element, index) => id = index + 1);
+        const newComment = { id: id, name: action.userName, comment: action.userMessage, avatar: UserAnonym };
+        state.push(newComment)
+        return state;
+          
+          default: return state;
+    }
 
 }
 
 export const newCommentReducerActionCreator = (userName, userMessage) => {
-return {
-    type: newCommentReducer,
-    userName: userName, 
-    userMessage: userMessage
-}
+    return {
+        type: NEW_COMMENT_REDUCER,
+        userName: userName, 
+        userMessage: userMessage
+    }
 }
 export default commentsReducer;

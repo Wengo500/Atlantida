@@ -1,52 +1,51 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles/burgerMenu.scss';
 import { Link } from 'react-router-dom';
 import { Telegram, LinkedIn, Facebook } from '@material-ui/icons';
-import Sun from '@material-ui/icons/WbSunnyOutlined';
-import Moon from '@material-ui/icons/Brightness3Outlined';
+import ThemeIcon from './ThemeIcon';
 
-export default class HeaderBurger extends Component {
- 
-  render(props) {
+// import {burgerBlackoutActionCreator} from '../redux/burgerReducer';
 
-      const renderThemIcon = () => {
-       if(this.props.state.dark === true)  return <Sun onClick={() => this.props.changeColorThem()} className="sun-icon"/>
-        else return <Moon onClick={() => this.props.changeColorThem()} className="moon-icon"/>
-     }
+
+const BurgerMenu = (props) => {
+
     let burgerClasses = ["burger"]
     let burgerBlackout = []
-    if(this.props.state.burger === true) {
+    if(props.store.getState().burger === true) {
       burgerClasses.push('burger-true')
       burgerBlackout.push('burger-blackout')
-}
+ }
     return (
-    <>
-      <div onClick={this.props.changeBurgerMenu} className={burgerBlackout.join(' ')}></div>
-      <div className={burgerClasses.join(' ')} >
+      <>
+        <div className={burgerBlackout.join(' ')} >
+        </div>
 
-            <nav className="burger__nav">
-              <ul className="burger__nav__menu">
-                <li><Link className="burger-menu__items" to="/">Home</Link></li>
-                <li><a className="burger-menu__items" href="#about">About</a></li>
-                <li><a className="burger-menu__items" href="#services">SERVICES</a></li>
-                <li><a className="burger-menu__items" href="#prices">Prices</a></li>
-                <li><a className="burger-menu__items" href="#blog">Blog</a></li>
-                <li><Link className="burger-menu__items" to="/forum">Forum</Link></li>
-                <li><Link className="burger-menu__items" to="/portfolio">Portfolio</Link></li>
-                <li><Link className="burger-menu__items" to="/contact">contacts</Link></li>
-              </ul>
+        <div className={burgerClasses.join(' ')} > 
 
-                {renderThemIcon()}
+          <nav className="burger__nav">
+            <ul className="burger__nav__menu">
+              <li><Link className="burger-menu__items" to="/">Home</Link></li>
+              <li><a className="burger-menu__items" href="#about">About</a></li>
+              <li><a className="burger-menu__items" href="#services">SERVICES</a></li>
+              <li><a className="burger-menu__items" href="#prices">Prices</a></li>
+              <li><a className="burger-menu__items" href="#blog">Blog</a></li>
+              <li><Link className="burger-menu__items" to="/forum">Forum</Link></li>
+              <li><Link className="burger-menu__items" to="/portfolio">Portfolio</Link></li>
+              <li><Link className="burger-menu__items" to="/contact">contacts</Link></li>
+            </ul>
 
-                <div className="social">
-                  <a className="social_link social_link__burger" href="/"> <LinkedIn /> </a>
-                  <a className="social_link social_link__burger" href="/"> <Facebook /> </a>
-                  <a className="social_link social_link__burger" href="/"> <Telegram /> </a>
-                </div>
-              </nav>
-      </div>
+           <ThemeIcon store={props.store} />
+
+            <div className="social">
+              <a className="social_link social_link__burger" href="/"> <LinkedIn /> </a>
+              <a className="social_link social_link__burger" href="/"> <Facebook /> </a>
+              <a className="social_link social_link__burger" href="/"> <Telegram /> </a>
+            </div>
+          </nav>
+        </div>
       </>
     )
-  };
 
 };
+
+export default BurgerMenu;  

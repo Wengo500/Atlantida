@@ -4,28 +4,21 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-import state from './redux/state';
-import {newComment, subscribe, changeColorThem, changeBurgerMenu, renderBurgerBtn} from './redux/state'
+import store from './redux/redux-store';
 
 let rerenderDOM = (state) => {
-
   ReactDOM.render(
-
     <React.StrictMode>
       <BrowserRouter>
-        <App 
-        state={state} 
-        newComment={newComment} 
-        changeColorThem={changeColorThem} 
-        changeBurgerMenu={changeBurgerMenu} renderBurgerBtn={renderBurgerBtn}/>
+        <App store={store} />
       </BrowserRouter>
     </React.StrictMode>,
 
     document.getElementById('root')
   );
 };
-rerenderDOM(state);
-subscribe(rerenderDOM);
+rerenderDOM(store.getState());
+store.subscribe(rerenderDOM);
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
