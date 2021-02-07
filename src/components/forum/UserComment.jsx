@@ -3,8 +3,6 @@ import './style/userComment.scss';
 import '../styles/styleComponents.scss';
 
 const UserComment = (props) => {
-  
-     console.log()
 
     return (
       <div className="App">

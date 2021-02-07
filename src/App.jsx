@@ -9,9 +9,9 @@ const App = (props) => {
 
     return (
       <div className="App">
-        <Header store={props.store}/>
-        <BurgerMenu store={props.store}/>
-        <Main store={props.store} />
+        <Header/>
+        <BurgerMenu/>
+        <Main/>
         <Footer />
       </div> 
     );

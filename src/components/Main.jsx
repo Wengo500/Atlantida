@@ -1,27 +1,39 @@
 import { Switch, Route } from 'react-router-dom';
 import './styles/main.scss';
+import {connect} from 'react-redux';
 import Home from '../pages/Home';
 import Portfolio from '../pages/Portfolio';
 import Forum from '../pages/Forum';
 import Contacts from '../pages/Contacts';
-const Main = (props) =>{
+
+
+const Main = (state) =>{
     
  const mainClasses = ['main'];
-      if(props.store.getState().dark === true) mainClasses.push("main-dark");
+      if(state.colorThem === true) mainClasses.push("main-dark");
     return (
-      <Switch>
-        <main className={mainClasses.join(' ')}>
-          <Route exact path="/portfolio" name="Portfolio" render={() => <Portfolio />} />
-          <Route exact path="/forum" name="forum" render={() => 
-            <Forum store={props.store} />}
-          />
-          <Route exact path="/contact" name="Contact" render={() => <Contacts />} />
-          <Route exact path="/" name="Home" render={() => <Home />} />
-          <Route exact path="/Atlantida" name="Home" render={() => <Home />} />
-        </main>
-      </Switch>
+      <main className={mainClasses.join(' ')}>
+        <Switch>
+            <Route exact path="/portfolio" name="Portfolio" render={() => <Portfolio />} />
+            <Route exact path="/forum" name="forum" render={() => 
+              <Forum/>}
+            />
+            <Route exact path="/contact" name="Contact" render={() => <Contacts />} />
+            <Route exact path="/" name="Home" render={() => <Home />} />
+            <Route exact path="/Atlantida" name="Home" render={() => <Home />} />
+        </Switch>
+      </main>
+
     )
   
 };
 
-export default Main
+const mapStateToProps = (state) => {
+  return {
+    burger: state.burger,
+    colorThem: state.dark
+  }
+}
+
+
+export default connect(mapStateToProps, null)(Main);

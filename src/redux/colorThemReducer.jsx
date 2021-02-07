@@ -8,7 +8,8 @@ let colorThemReducer = (state=initialState.colorThem, action) => {
  switch(action.type) {
          
    case CHANGE_COLOR_THEME:
-    return state = !state;
+    let newState = !state
+    return newState;
 
   default: 
     return state;

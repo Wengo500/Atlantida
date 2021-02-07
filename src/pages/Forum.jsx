@@ -1,34 +1,34 @@
-import React from 'react'
-import './styles/forum.scss'
+import React from 'react';
+import {connect} from 'react-redux';
+import './styles/forum.scss';
 import UserComment from '../components/forum/UserComment';
-import { Container } from '@material-ui/core'
+import { Container } from '@material-ui/core';
 import '../components/styles/styleComponents.scss';
 
-import {newCommentReducerActionCreator} from '../redux/commentsReducer'
+import {newCommentReducerActionCreator} from '../redux/commentsReducer';
 
 let newPostMessage = React.createRef()
 let newPostUserName = React.createRef()
 
-const Forum = (props) => {
- const addComment = () => { 
+const Forum = (state) => {
+
+  const addComment = () => { 
    
-   let userMessage = newPostMessage.current.value;
-   let userName = newPostUserName.current.value;
+    let userMessage = newPostMessage.current.value;
+    let userName = newPostUserName.current.value;
 
-   if (userMessage && userName !== '') {
-
-          props.store.dispatch(newCommentReducerActionCreator(userName, userMessage));
-  } else {
-      alert('Please write your name and message')
-    }
+      if (userMessage && userName !== '') state.newComment(userName, userMessage);
+        else alert('Please write your name and message');
+    
     userMessage = newPostMessage.current.value ='';
     userName = newPostUserName.current.value ='';
- }
-   const renderComment = () => {
-    return props.store.getState().comments.map(comment => {
-      return <UserComment store={props.store} comment={comment} key={comment.id} />
-    })
-   }
+  };
+
+  const renderComment = () => {
+    return state.comments.map(comment => {
+      return <UserComment comment={comment} key={comment.id} />
+    });
+  };
 
     return (
       <div id="forum" className="forum section">
@@ -39,13 +39,25 @@ const Forum = (props) => {
           {renderComment()}
 
           <form className="forum__form">
-            <input className="input-name" type="text"  placeholder="Name*" ref={newPostUserName} />
-            <textarea name="message" placeholder="Your Message*" ref={newPostMessage} />
+            <input className="forum__input input-name" type="text"  placeholder="Name*" ref={newPostUserName} />
+            <textarea className="forum__input message" name="message" placeholder="Your Message*" ref={newPostMessage} />
+            <span id="btn" className="forum__button button" onClick={()=> addComment() } >Send Message</span>
+
           </form>
-          <button id="btn" className="button" onClick={()=> addComment() } >Send Message</button>
         </Container>
       </div>
     );
 };
 
-export default Forum
+const mapStateToProps = (state) => {
+  return {
+    comments: state.comments
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    newComment: (userName, userMessage) => dispatch(newCommentReducerActionCreator(userName, userMessage))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Forum);

@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/burgerMenu.scss';
 import './styles/burgerBtn.scss';
+import {connect} from 'react-redux'
 
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -8,16 +9,15 @@ import { grey } from '@material-ui/core/colors';
 
 import {burgerBtnActionCreator} from '../redux/burgerReducer';
 
-
-const BurgerBtn = (props) => {
+const BurgerBtn = (state) => {
     const renderBurgerBtn = () => {
-      if(props.store.getState().burger === true) return <CloseIcon
+      if(state.burger === true) return <CloseIcon
           fontSize = "large"
           style = {
              { color: grey[500] }
           } /> ;
-      if (props.store.getState().dark === true) {
-         if (props.store.getState().burger === true) return <CloseIcon
+      if (state.colorThem === true) {
+         if (state.burger === true) return <CloseIcon
           fontSize = "large"
           style = {
              { color: grey[500] }
@@ -29,16 +29,28 @@ const BurgerBtn = (props) => {
              { color: grey[500] }
          } />
 
-     } else if (props.store.getState().burger === true) return <CloseIcon fontSize = "large" /> ;
+     } else if (state.burger === true) return <CloseIcon fontSize = "large" /> ;
            else return <MenuIcon fontSize = "large" />
   }
 
  
     return (
-  <div className="burger-btn" onClick={() => props.store.dispatch(burgerBtnActionCreator())}>{renderBurgerBtn()}</div>
+  <div className="burger-btn" onClick={() => state.burgerBtn()}>{renderBurgerBtn()}</div>
       
     )
 
 };
 
-export default BurgerBtn
+const mapStateToProps = (state) => {
+  return {
+    burger: state.burger,
+    colorThem: state.dark
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    burgerBtn: () => dispatch(burgerBtnActionCreator())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BurgerBtn);

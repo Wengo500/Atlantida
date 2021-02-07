@@ -16,14 +16,12 @@ let initialState = {
 
       case NEW_COMMENT_REDUCER: 
         let id = 0;
-        state.forEach((element, index) => id = index + 1);
-        const newComment = { id: id, name: action.userName, comment: action.userMessage, avatar: UserAnonym };
-        state.push(newComment)
-        return state;
+       
+        state.forEach((element, index) => id = index + 1);         
+        return [...state,{ id: id, name: action.userName, comment: action.userMessage, avatar: UserAnonym }];
           
-          default: return state;
+        default: return state;
     }
-
 }
 
 export const newCommentReducerActionCreator = (userName, userMessage) => {
