@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Atlantida/static/css/main.cf6daec1.chunk.css",
-    "main.js": "/Atlantida/static/js/main.a4b54977.chunk.js",
-    "main.js.map": "/Atlantida/static/js/main.a4b54977.chunk.js.map",
+    "main.js": "/Atlantida/static/js/main.dd3ea3b9.chunk.js",
+    "main.js.map": "/Atlantida/static/js/main.dd3ea3b9.chunk.js.map",
     "runtime-main.js": "/Atlantida/static/js/runtime-main.7d17f30f.js",
     "runtime-main.js.map": "/Atlantida/static/js/runtime-main.7d17f30f.js.map",
     "static/css/2.df84bfcb.chunk.css": "/Atlantida/static/css/2.df84bfcb.chunk.css",
@@ -44,6 +44,6 @@
     "static/css/2.df84bfcb.chunk.css",
     "static/js/2.a09546f5.chunk.js",
     "static/css/main.cf6daec1.chunk.css",
-    "static/js/main.a4b54977.chunk.js"
+    "static/js/main.dd3ea3b9.chunk.js"
   ]
 }
