@@ -1,4 +1,4 @@
- import UserAnonym from '../img/UserAnonym.jpg';
+import UserAnonym from '../img/UserAnonym.jpg';
 
 const NEW_COMMENT_REDUCER = 'NEW_COMMENT_REDUCER';
 

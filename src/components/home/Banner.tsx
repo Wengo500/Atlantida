@@ -4,7 +4,8 @@ import './style/banner.scss';
 export default class Banner extends Component {
   render() {
     return (
-      <main className="banner">
+      <main className="banner" id='Atlantida'>
+
         <div className="banner_content">
           <div className="banner_text">
             <p className="who-are-we">Design Studio and Digital Agency</p>

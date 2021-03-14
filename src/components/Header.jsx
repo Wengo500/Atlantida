@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 import { Telegram, LinkedIn, Facebook } from '@material-ui/icons';
 import {connect} from 'react-redux';
+import { HashLink } from 'react-router-hash-link';
 
 import ThemeIcon from './ThemeIcon';
 import BurgerBtn from './BurgerBtn';
@@ -21,14 +22,14 @@ const Header = (state) => {
             <Link to="/"> <img className="header_logo" src={logo} alt="Logo" /></Link>
             <nav className="header_nav">
               <ul className="nav_menu">
-                <li className="nav_menu_items"><Link to="/Atlantida">Home</Link></li>
-                <li className="nav_menu_items"><a href="#about">About</a></li>
-                <li className="nav_menu_items"><a href="#services">SERVICES</a></li>
-                <li className="nav_menu_items"><a href="#prices">Prices</a></li>
-                <li className="nav_menu_items"><a href="#blog">Blog</a></li>
-                <li className="nav_menu_items"><Link to="/forum">Forum</Link></li>
-                <li className="nav_menu_items"><Link to="/portfolio">Portfolio</Link></li>
-                <li className="nav_menu_items"><Link to="/contact">contacts</Link></li>
+                <li className="nav_menu_items"><HashLink to="/Atlantida">Home</HashLink></li>
+                <li className="nav_menu_items"><HashLink to="/#about">About</HashLink></li>
+                <li className="nav_menu_items"><HashLink to="/#services">SERVICES</HashLink></li>
+                <li className="nav_menu_items"><HashLink to="/#prices">Prices</HashLink></li>
+                <li className="nav_menu_items"><HashLink to="/#blog">Blog</HashLink></li>
+                <li className="nav_menu_items"><HashLink to="/forum">Forum</HashLink></li>
+                <li className="nav_menu_items"><HashLink to="/portfolio">Portfolio</HashLink></li>
+                <li className="nav_menu_items"><HashLink to="/contact">contacts</HashLink></li>
               </ul>
 
               <ThemeIcon/>

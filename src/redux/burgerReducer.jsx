@@ -12,7 +12,6 @@ let burgerReducer = (state=initialState.burger, action) => {
       let newState = !state
       return newState;
       
-
     default: 
       return state;
   }

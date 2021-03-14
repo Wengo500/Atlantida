@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import Portfolio from '../pages/Portfolio';
 import Forum from '../pages/Forum';
 import Contacts from '../pages/Contacts';
+import ScrollToTop from './ScrollToTop';
 
 
 const Main = (state) =>{
@@ -13,6 +14,7 @@ const Main = (state) =>{
       if(state.colorThem === true) mainClasses.push("main-dark");
     return (
       <main className={mainClasses.join(' ')}>
+        <ScrollToTop />
         <Switch>
             <Route exact path="/portfolio" name="Portfolio" render={() => <Portfolio />} />
             <Route exact path="/forum" name="forum" render={() => 

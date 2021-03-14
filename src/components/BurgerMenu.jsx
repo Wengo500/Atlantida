@@ -1,25 +1,29 @@
 import React from 'react';
 import './styles/burgerMenu.scss';
-import {connect} from 'react-redux';
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 import { Telegram, LinkedIn, Facebook } from '@material-ui/icons';
 import ThemeIcon from './ThemeIcon';
 
-
-// import {burgerBtnActionCreator} from '../redux/burgerReducer';
+import {burgerBtnActionCreator} from '../redux/burgerReducer';
 
 
 const BurgerMenu = (state) => {
 
+  const burgerState = useSelector(state => state.burger, shallowEqual );
+  const dispatch = useDispatch();
+
     let burgerClasses = ["burger"]
     let burgerBlackout = []
-    if(state.burger === true) {
+    if(burgerState === true) {
       burgerClasses.push('burger-true')
       burgerBlackout.push('burger-blackout')
  }
     return (
       <>
-        <div className={burgerBlackout.join(' ')}>
+        <div className={burgerBlackout.join(' ')} onClick={() => dispatch(burgerBtnActionCreator())}>
         </div>
 
         <div className={burgerClasses.join(' ')} > 
@@ -27,10 +31,10 @@ const BurgerMenu = (state) => {
           <nav className="burger__nav">
             <ul className="burger__nav__menu">
               <li><Link className="burger-menu__items" to="/">Home</Link></li>
-              <li><a className="burger-menu__items" href="#about">About</a></li>
-              <li><a className="burger-menu__items" href="#services">SERVICES</a></li>
-              <li><a className="burger-menu__items" href="#prices">Prices</a></li>
-              <li><a className="burger-menu__items" href="#blog">Blog</a></li>
+              <li><HashLink className="burger-menu__items" to="/#about">About</HashLink></li>
+              <li><HashLink className="burger-menu__items" to="/#services">SERVICES</HashLink></li>
+              <li><HashLink className="burger-menu__items" to="/#prices">Prices</HashLink></li>
+              <li><HashLink className="burger-menu__items" to="/#blog">Blog</HashLink></li>
               <li><Link className="burger-menu__items" to="/forum">Forum</Link></li>
               <li><Link className="burger-menu__items" to="/portfolio">Portfolio</Link></li>
               <li><Link className="burger-menu__items" to="/contact">contacts</Link></li>
@@ -47,18 +51,6 @@ const BurgerMenu = (state) => {
         </div>
       </>
     )
-
 };
 
-const mapStateToProps = (state) => {
-  return {
-    burger: state.burger
-  }
-}
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     burgerBtn: () => dispatch(burgerBtnActionCreator())
-//   }
-// }
-
-export default connect(mapStateToProps, null)(BurgerMenu);  
+export default BurgerMenu;  

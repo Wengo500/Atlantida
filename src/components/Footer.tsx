@@ -44,9 +44,6 @@ export default class Footer extends Component {
           <p className="copyright">Copyright © 2020 Atlantida Theme</p>
         </Container>
       </footer>
-
-
-
     )
   };
 };
