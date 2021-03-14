@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Atlantida/static/css/main.ae1c68e2.chunk.css",
-    "main.js": "/Atlantida/static/js/main.32ca5bb6.chunk.js",
-    "main.js.map": "/Atlantida/static/js/main.32ca5bb6.chunk.js.map",
-    "runtime-main.js": "/Atlantida/static/js/runtime-main.41c4e37c.js",
-    "runtime-main.js.map": "/Atlantida/static/js/runtime-main.41c4e37c.js.map",
+    "main.css": "/Atlantida/static/css/main.cf6daec1.chunk.css",
+    "main.js": "/Atlantida/static/js/main.8b700cd4.chunk.js",
+    "main.js.map": "/Atlantida/static/js/main.8b700cd4.chunk.js.map",
+    "runtime-main.js": "/Atlantida/static/js/runtime-main.7d17f30f.js",
+    "runtime-main.js.map": "/Atlantida/static/js/runtime-main.7d17f30f.js.map",
     "static/css/2.df84bfcb.chunk.css": "/Atlantida/static/css/2.df84bfcb.chunk.css",
-    "static/js/2.d8b48193.chunk.js": "/Atlantida/static/js/2.d8b48193.chunk.js",
-    "static/js/2.d8b48193.chunk.js.map": "/Atlantida/static/js/2.d8b48193.chunk.js.map",
-    "static/js/3.525b0fcf.chunk.js": "/Atlantida/static/js/3.525b0fcf.chunk.js",
-    "static/js/3.525b0fcf.chunk.js.map": "/Atlantida/static/js/3.525b0fcf.chunk.js.map",
+    "static/js/2.2d3dabb8.chunk.js": "/Atlantida/static/js/2.2d3dabb8.chunk.js",
+    "static/js/2.2d3dabb8.chunk.js.map": "/Atlantida/static/js/2.2d3dabb8.chunk.js.map",
+    "static/js/3.1f33d0b2.chunk.js": "/Atlantida/static/js/3.1f33d0b2.chunk.js",
+    "static/js/3.1f33d0b2.chunk.js.map": "/Atlantida/static/js/3.1f33d0b2.chunk.js.map",
     "index.html": "/Atlantida/index.html",
     "static/css/2.df84bfcb.chunk.css.map": "/Atlantida/static/css/2.df84bfcb.chunk.css.map",
-    "static/css/main.ae1c68e2.chunk.css.map": "/Atlantida/static/css/main.ae1c68e2.chunk.css.map",
-    "static/js/2.d8b48193.chunk.js.LICENSE.txt": "/Atlantida/static/js/2.d8b48193.chunk.js.LICENSE.txt",
+    "static/css/main.cf6daec1.chunk.css.map": "/Atlantida/static/css/main.cf6daec1.chunk.css.map",
+    "static/js/2.2d3dabb8.chunk.js.LICENSE.txt": "/Atlantida/static/js/2.2d3dabb8.chunk.js.LICENSE.txt",
     "static/media/footer.scss": "/Atlantida/static/media/footerBg.ddaf7e73.jpg",
     "static/media/111.918e2ef7.jpg": "/Atlantida/static/media/111.918e2ef7.jpg",
     "static/media/2.1b797a95.png": "/Atlantida/static/media/2.1b797a95.png",
@@ -40,10 +40,10 @@
     "static/media/clientSlider.scss": "/Atlantida/static/media/sliderBg.b0ad3f20.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.41c4e37c.js",
+    "static/js/runtime-main.7d17f30f.js",
     "static/css/2.df84bfcb.chunk.css",
-    "static/js/2.d8b48193.chunk.js",
-    "static/css/main.ae1c68e2.chunk.css",
-    "static/js/main.32ca5bb6.chunk.js"
+    "static/js/2.2d3dabb8.chunk.js",
+    "static/css/main.cf6daec1.chunk.css",
+    "static/js/main.8b700cd4.chunk.js"
   ]
 }
